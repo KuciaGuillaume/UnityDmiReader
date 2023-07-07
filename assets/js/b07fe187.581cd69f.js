@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkunity_dmi_reader=self.webpackChunkunity_dmi_reader||[]).push([[2745],{6596:e=>{e.exports=JSON.parse('{"permalink":"/UnityDmiReader/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
