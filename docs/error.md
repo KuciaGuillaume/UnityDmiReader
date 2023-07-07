@@ -81,6 +81,7 @@ This guide provides detailed explanations and best practices for handling common
 
 - Update or convert the DMI file to the compatible version (4.0).
 - If you are using a third-party tool to generate the DMI file, check if it supports generating files in the compatible version.
+- In the event that upgrading your DMI file to version 4.0 is not feasible, you could attempt to alter the "private string _targetVersion" variable at the beginning of the file by changing its value. However, be aware that this might cause the script to behave unpredictably, or unhandled issues may arise.
 
 ---
 

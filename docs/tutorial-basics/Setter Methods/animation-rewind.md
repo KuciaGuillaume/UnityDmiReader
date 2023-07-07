@@ -2,7 +2,7 @@
 
 ## SetAnimationRewind
 
-```csharp
+```js
 public void SetAnimationRewind(bool rewind, int stateIndex = 0);
 public void SetAnimationRewind(bool rewind, string stateName = "");
 ```
@@ -27,20 +27,62 @@ The `SetAnimationRewind` method is used to set the rewind state of an animation.
 ### Example Usage
 
 #### Using stateIndex:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationRewind(true, 2);
-    Debug.Log("Set animation at index 2 to rewind.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationRewind(true, 2);
+            Debug.Log("Set animation at index 2 to rewind.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
 #### Using stateName:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationRewind(true, "stateName");
-    Debug.Log("Set 'Running' animation to rewind.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationRewind(true, "stateName");
+            Debug.Log("Set 'stateName' animation to rewind.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
@@ -50,7 +92,7 @@ if (dmi.Load("dmi_file_path")) {
 
 ## SetAllAnimationRewind
 
-```csharp
+```js
 public void SetAllAnimationRewind(bool rewind);
 ```
 
@@ -69,11 +111,32 @@ The `SetAllAnimationRewind` method is used to set the rewind state for all anima
 
 ### Example Usage
 
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    // Set rewind state for all animations to true, making them play in reverse
-    dmi.SetAllAnimationRewind(true);
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAllAnimationRewind(true);
+            Debug.Log("Set rewind state for all animations to true, making them play in reverse.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 

@@ -1,15 +1,15 @@
-# AnimationCount
+# AnimationLoopCount
 
-## SetAnimationCount
+## SetAnimationLoopCount
 
-```csharp
-public void SetAnimationCount(int count, int stateIndex = 0);
-public void SetAnimationCount(int count, string stateName = "");
+```js
+public void SetAnimationLoopCount(int count, int stateIndex = 0);
+public void SetAnimationLoopCount(int count, string stateName = "");
 ```
 
 ### Description
 
-The `SetAnimationCount` method is used to set the animation count for a specific animation state. There are two overloads for this method, allowing the user to specify the state either by its index or by its name.
+The `SetAnimationLoopCount` method is used to set the animation count for a specific animation state. There are two overloads for this method, allowing the user to specify the state either by its index or by its name.
 
 ### Parameters
 
@@ -28,21 +28,63 @@ The `SetAnimationCount` method is used to set the animation count for a specific
 
 #### Using stateIndex:
 
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationCount(10, 2);
-    Debug.Log("Animation count set for state index 2.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationLoopCount(10, 2);
+            Debug.Log("Animation count: " + this._dmi.GetAnimationLoopCount(2));
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
 #### Using stateName:
 
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationCount(10, "stateName");
-    Debug.Log("Animation count set for state named 'Running'.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationLoopCount(10, "stateName");
+            Debug.Log("Animation count: " + this._dmi.GetAnimationLoopCount("stateName"));
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
@@ -50,7 +92,7 @@ if (dmi.Load("dmi_file_path")) {
 
 ## SetAllAnimationCount
 
-```csharp
+```js
 public void SetAllAnimationCount(int count);
 ```
 
@@ -69,11 +111,33 @@ The `SetAllAnimationCount` method is used to set the animation count for all ani
 
 ### Example Usage
 
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    // Set the animation count for all states to 3.
-    dmi.SetAllAnimationCount(3);
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            int count = 10;
+            this._dmi.SetAllAnimationCount(count);
+            Debug.Log("Animation count: " + count.toString());
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 

@@ -2,7 +2,7 @@
 
 ## SetAnimationDelayAtIndex
 
-```csharp
+```js
 public void SetAnimationDelayAtIndex(float delay, int index, int stateIndex = 0);
 public void SetAnimationDelayAtIndex(float delay, int index, string stateName = "");
 ```
@@ -28,20 +28,64 @@ The `SetAnimationDelayAtIndex` method is used to set the animation delay for a s
 ### Example Usage
 
 #### Using stateIndex:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationDelayAtIndex(0.5f, 2, 1);
-    Debug.Log("Animation delay set for state index 1, frame index 2.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            float delay = 0.5f;
+            this._dmi.SetAnimationDelayAtIndex(delay, 2, 1);
+            Debug.Log("Animation delay set for state index 1, frame index 2: " + delay.toString());
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
 #### Using stateName:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationDelayAtIndex(0.5f, 2, "stateName");
-    Debug.Log("Animation delay set for state named 'Running', frame index 2.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            float delay = 0.5f;
+            this._dmi.SetAnimationDelayAtIndex(delay, 2, "stateName");
+            Debug.Log("Animation delay set for state named 'stateName', frame index 2: " + delay.toString());
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 

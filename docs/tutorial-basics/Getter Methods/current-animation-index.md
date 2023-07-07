@@ -75,7 +75,7 @@ public class ExampleUnityClass : MonoBehaviour
         this._dmi = gameObject.AddComponent<DMI>();
         if (this._dmi.Load("dmi_file_path")) {
             int animationIndex = this._dmi.GetCurrentAnimationIndex("stateName");
-            Debug.Log("Current animation index for state 'Running' is: " + animationIndex);
+            Debug.Log("Current animation index for state 'stateName' is: " + animationIndex);
         }
     }
 

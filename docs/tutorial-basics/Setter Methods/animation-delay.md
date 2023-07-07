@@ -2,7 +2,7 @@
 
 ## SetAnimationDelay
 
-```csharp
+```js
 public void SetAnimationDelay(float delay, int stateIndex = 0);
 public void SetAnimationDelay(float delay, string stateName = "");
 ```
@@ -27,20 +27,62 @@ The `SetAnimationDelay` method sets the animation delay for all frames of a spec
 ### Example Usage
 
 #### Using stateIndex:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationDelay(0.5f, 2);
-    Debug.Log("Animation delay set for state index 2.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationDelay(0.5f, 1);
+            Debug.Log("Animation delay set for state index 2.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
 #### Using stateName:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationDelay(0.5f, "stateName");
-    Debug.Log("Animation delay set for state 'Running'.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationDelay(0.5f, "stateName");
+            Debug.Log("Animation delay set for state 'stateName'.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
@@ -48,7 +90,7 @@ if (dmi.Load("dmi_file_path")) {
 
 ## SetAllAnimationDelay
 
-```csharp
+```js
 public void SetAllAnimationDelay(float delay);
 ```
 
@@ -68,11 +110,32 @@ The `SetAllAnimationDelay` method is used to set the animation delay for all fra
 
 ### Example Usage
 
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    // Set a 0.5 second delay for all frames in all animation states
-    dmi.SetAllAnimationDelay(0.5f);
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAllAnimationDelay(0.5f);
+            Debug.Log("Set a 0.5 delay for all frames in all animation states");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 

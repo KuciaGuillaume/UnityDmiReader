@@ -2,7 +2,7 @@
 
 ## SetAnimationToInfinite
 
-```csharp
+```js
 public void SetAnimationToInfinite(int stateIndex = 0);
 public void SetAnimationToInfinite(string stateName = "");
 ```
@@ -26,20 +26,62 @@ The `SetAnimationToInfinite` method is used to set an animation state to infinit
 ### Example Usage
 
 #### Using stateIndex:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationToInfinite(2);
-    Console.WriteLine("Animation at index 2 is set to infinite looping.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationToInfinite(2);
+            Debug.Log("Animation at index 2 is set to infinite looping.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
 #### Using stateName:
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    dmi.SetAnimationToInfinite("stateName");
-    Console.WriteLine("Animation with the name 'Running' is set to infinite looping.");
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAnimationToInfinite("stateName");
+            Debug.Log("Animation with the name 'stateName' is set to infinite looping.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
@@ -47,7 +89,7 @@ if (dmi.Load("dmi_file_path")) {
 
 ## SetAllAnimationToInfinite
 
-```csharp
+```js
 public void SetAllAnimationToInfinite();
 ```
 
@@ -66,11 +108,32 @@ This method does not take any parameters.
 
 ### Example Usage
 
-```csharp
-DMI dmi = AddComponent<DMI>();
-if (dmi.Load("dmi_file_path")) {
-    // Set all animations to play infinitely.
-    dmi.SetAllAnimationToInfinite();
+```js
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleUnityClass : MonoBehaviour
+{
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            this._dmi.SetAllAnimationToInfinite();
+            Debug.Log("Set all animations to play infinitely.");
+        }
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 

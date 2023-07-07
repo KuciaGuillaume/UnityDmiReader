@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Smooth Animation Integration',
+    Svg: require('@site/static/img/UnityDmiReader.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Bring your sprites to life effortlessly with UnityDmiReader. Seamlessly import .dmi files into Unity and create dynamic animations for characters and objects in your game. No need to worry about compatibility or complex conversion processes; UnityDmiReader takes care of everything.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Flexible Getters',
+    Svg: require('@site/static/img/UnityDmiReader.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Getters flexibles : accédez facilement aux données dont vous avez besoin. UnityDmiReader offre un ensemble robuste de méthodes getter, vous permettant de récupérer efficacement des informations pertinentes à partir de fichiers .dmi. Qu'il s'agisse d'images d'animation, de propriétés de sprite ou de métadonnées, les getters d'UnityDmiReader vous fournissent les données exactes dont vous avez besoin pour créer une expérience de jeu fluide.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powerful Setters',
+    Svg: require('@site/static/img/UnityDmiReader.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Setters puissants : Prenez le contrôle de vos actifs .dmi avec les méthodes de setter intuitives de UnityDmiReader. Attribuez facilement de nouvelles valeurs aux propriétés, définissez des séquences d'animation et manipulez les métadonnées pour répondre aux exigences de votre jeu. Personnalisez vos fichiers .dmi à la perfection sans compromettre les performances, grâce à la fonctionnalité de configuration simplifiée de UnityDmiReader.
       </>
     ),
   },

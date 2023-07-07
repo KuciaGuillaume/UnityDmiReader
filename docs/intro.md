@@ -41,6 +41,6 @@ I'll start by saying that it's certainly possible to find errors in the scripts.
 
  - Look at how the function causing the problem works to see if an incorrect response might actually be normal given the information sent.
  - It's also normal to check if the information sent is valid.
- - In case of a specific error message, try to see how to resolve it in the error panel ERROR.
+ - In case of a specific error message, try to see how to resolve it in the [Error Handling Guide](error.md).
 
 If all these steps have not been conclusive, please contact me at the following email address: kuciaguillaume.pro@gmail.com

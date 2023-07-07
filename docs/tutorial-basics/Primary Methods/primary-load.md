@@ -38,23 +38,33 @@ The `Load` method is responsible for loading a DMI file from the provided file p
 ### Example Usage
 
 ```js
-// Create an instance of the class containing the Load method.
-var dmiLoader = new DmiLoader();
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// Specify the relative file path to the DMI file.
-string relativeFilePath = "path_to_dmi_file.dmi";
-
-// Call the Load method and store the result.
-bool isLoaded = dmiLoader.Load(relativeFilePath);
-
-// Output the result.
-if (isLoaded)
+public class ExampleUnityClass : MonoBehaviour
 {
-    Console.WriteLine("DMI file successfully loaded.");
-}
-else
-{
-    Console.WriteLine("Failed to load DMI file.");
+    // Define a private DMI object
+    private DMI _dmi;
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        this._dmi = gameObject.AddComponent<DMI>();
+        if (this._dmi.Load("dmi_file_path")) {
+            Debug.Log("DMI file successfully loaded.");
+        } else {
+            Debug.Log("Failed to load DMI file.");
+        }
+
+    }
+
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    void Update() {}
 }
 ```
 
