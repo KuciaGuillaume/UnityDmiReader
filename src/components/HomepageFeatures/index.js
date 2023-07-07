@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/UnityDmiReader.svg').default,
     description: (
       <>
-        Getters flexibles : accédez facilement aux données dont vous avez besoin. UnityDmiReader offre un ensemble robuste de méthodes getter, vous permettant de récupérer efficacement des informations pertinentes à partir de fichiers .dmi. Qu'il s'agisse d'images d'animation, de propriétés de sprite ou de métadonnées, les getters d'UnityDmiReader vous fournissent les données exactes dont vous avez besoin pour créer une expérience de jeu fluide.
+        Flexible Getters: Easily access the data you need. UnityDmiReader offers a robust set of getter methods, allowing you to efficiently retrieve relevant information from .dmi files. Whether it's animation frames, sprite properties, or metadata, UnityDmiReader's getters provide you with the exact data you need to create a smooth gaming experience.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/UnityDmiReader.svg').default,
     description: (
       <>
-        Setters puissants : Prenez le contrôle de vos actifs .dmi avec les méthodes de setter intuitives de UnityDmiReader. Attribuez facilement de nouvelles valeurs aux propriétés, définissez des séquences d'animation et manipulez les métadonnées pour répondre aux exigences de votre jeu. Personnalisez vos fichiers .dmi à la perfection sans compromettre les performances, grâce à la fonctionnalité de configuration simplifiée de UnityDmiReader.
+        Powerful Setters: Take control of your .dmi assets with UnityDmiReader's intuitive setter methods. Easily assign new values to properties, define animation sequences, and manipulate metadata to meet your game's requirements. Customize your .dmi files to perfection without compromising performance, thanks to UnityDmiReader's simplified configuration functionality.
       </>
     ),
   },
